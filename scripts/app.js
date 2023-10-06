@@ -78,7 +78,9 @@ const tangerineNovels =  [
     }
 ]
 function returnItems(){
-  tangerineNovels.forEach(item => console.log(item.name)); //item is var within this scope and => directs what should be done to it
+  tangerineNovels.forEach(item => console.log(item.name)); 
   tangerineNovels.forEach(item => console.log(item.tags));
+  const longNovels = tangerineNovels.filter(item => item.wordCount > 2000000000);
+  console.log(longNovels);
 }
 returnItems();
