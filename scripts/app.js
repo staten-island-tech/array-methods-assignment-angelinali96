@@ -78,9 +78,11 @@ const tangerineNovels =  [
     }
 ]
 function returnItems(){
-  tangerineNovels.forEach(item => console.log(item.name)); 
-  tangerineNovels.forEach(item => console.log(item.tags));
-  const longNovels = tangerineNovels.filter(item => item.wordCount > 2000000000);
-  console.log(longNovels);
+  tangerineNovels.forEach(item => console.log(item.name)); //print all names
+  tangerineNovels.forEach((item) => //take objects
+    item.tags.forEach(el => console.log(el)) //print all tags in objects
+    );
+  const longNovels = tangerineNovels.filter(item => item.wordCount > 2000000000); //filter
+  console.log(longNovels); //log array attributed to longNovels
 }
 returnItems();
